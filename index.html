@@ -8,32 +8,39 @@
 </head>
 <body>
     <div class="h-[100vh] flex justify-center items-center flex-col">
-        <div class="text-5xl font-bold h-[8vh] bg-violet-500 w-full justify-center items-center flex">
+        <div class="text-4xl font-bold h-[10vh] bg-orange-300 w-full justify-center items-center flex pb-4 pt-2">
             <h1>Summariser</h1>
         </div>
-        <div class="h-[6vh] bg-blue-400 flex items-center justify-between w-full px-6">
-            <div>Home</div>
-            <div>Library</div>
-            <div>Favourites</div>
-            <div>Subjects</div>
-            <div>
-                <img/>
-                <h1>Your Profile</h1>
-            </div>
+    <div class="flex h-[8vh] w-full justify-between items-center bg-indigo-300 text-white shadow-md">
+        <div class="flex items-center p-2">
+            <img class="h-[18vh] w-[15vh] pt-2" src="book.png" alt="logo">
+            <p class="font-semibold text-2xl text-white">Summariser<span class="text-gray-900">.ai</span></p>
         </div>
-        <div class="h-[86vh] w-full flex justify-center items-center px-20 gap gap-8">
-            <div class="p-50">
-                <img src="image.png" height="500px" width="400px"/>
+        <div class="flex gap-6 items-center font-semibold p-6">
+            <div class="links flex gap-8">
+                <a href="#home"><u>Home</u></a>
+                <a href="#Library"><u>Library</u></a>
+                <a href="#Favourites"><u>Favourites</u></a>
+                <a href="#Subjects"><u>Subjects</u></a>
             </div>
-            <div class="flex-col ">
-               <a href="summary.html"><button class="py-2 px-4 bg-violet-500 text-4xl font-bold rounded-md">Start Now</button></a>
-                <div class="flex-col font-semibold text-2xl py-4">
-                    <h1> Step1: Upload the article</h1>
-                    <h1> Step2: See The Magic</h1>
-                    <h1> Step3: Check the Library</h1>
+            <div class="flex items-center justify-between gap-2">
+                <img src="signin.png" alt="not-avail" height="30px" width="30px">
+             </div>
+        </div>
+     </div>
+        <div class="h-[86vh] w-full flex justify-between items-center px-20 py-20 gap-8">
+            <div class="p-30">
+                <img src="image.svg" height="400px" width="400px"/>
+            </div>
+            <div class="flex-col m-50">
+               <a href="summary.html" target="_blank"><button class="py-2 px-4 bg-indigo-300 text-2xl rounded-md text-white font-bold shadow-gray-400 shadow-md active:shadow-none">Start Now</button></a>
+                <div class="flex-col font-semibold text-xl py-4 text-black mt-6">
+                    <h1 class="font-bold mb-4 text-black"> STEPS TO FOLLOW: </h1>
+                    <h1>Step 1: <span class="text-gray-400 m-2"> Upload the article</span></h1>
+                    <h1>Step 2: <span class="text-gray-400 m-2 "> See The Magic</span></h1> 
+                    <h1>Step 3: <span class="text-gray-400 m-2 "> Check the Library</span></h1> 
                 </div>
             </div>
-
         </div>
     </div>
 </body>

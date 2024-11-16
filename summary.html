@@ -7,22 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
-    <div class="h-[100vh] flex justify-center items-center flex-col">
-        <div class="text-5xl font-bold h-[10vh] bg-violet-500 w-full justify-center items-center flex">
-            <h1>Summariser</h1>
-        </div>
-        <div class="h-[92vh] w-full justify-center items-center flex gap-6 gap">
-            <textarea rows="14" placeholder="Add your article" id="input_text" class="h-[60vh] w-[45vh] border-2 border-black p-2 rounded-md"></textarea>
-            <button class="py-2 px-4 bg-violet-500 text-4xl font-bold rounded-md text-white" onclick="getData()">Get</button>
-            <textarea rows="14" placeholder="Wait for the result" id="output_text" class="h-[60vh] w-[45vh] border-2 border-black p-2 rounded-md"></textarea>
+<body class="bg-slate-100">
+    <div class="text-4xl font-bold h-[10vh] bg-orange-300 w-full justify-center items-center flex pb-4 pt-2">
+        <h1>Summariser</h1>
+    </div>
+        <div class="h-[92vh] w-full justify-center items-center gap-6 gap">
+            <div>
+                <textarea rows="14" placeholder="Add your article" id="input_text" class="h-[30vh] w-[150vh] border-2 border-black p-2 rounded-md m-8"></textarea>
+            </div>
+            <button class="py-2 px-4 bg-indigo-300 text-2xl font-bold rounded-md text-white shadow-gray-400 shadow-md active:shadow-none ml-8" onclick="getData()"> Get summary</button>
+            <div>
+                <textarea rows="14" placeholder="Obtain the summary" id="output_text" class="h-[30vh] w-[150vh] border-2 border-black p-2 rounded-md m-8"></textarea>
+            </div>
         </div>
         <script>
             function getData(){
                 var text= document.getElementById("input_text").value
                 query({"inputs":[text] }).then((response) => {
                 document.getElementById("output_text").value= JSON.stringify(response);
-                // console.log(JSON.stringify(response));
+                
             });
             }
             async function query(data) {
@@ -30,7 +33,7 @@
                     "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
                     {
                         headers: {
-                            Authorization: "Bearer XXXXXXXXXXX"
+                            Authorization: "Bearer XXXXXXXXXX"
                         },
                         method: "POST",
                         body: JSON.stringify(data),
@@ -41,6 +44,7 @@
             }
     
         </script>
+    
     
     
 </body>
